@@ -1,0 +1,87 @@
+{{page-title (capitalize this.model.name)}}
+<a href="/each-character/"> <img class="back-icon" src="https://cdn.icon-icons.com/icons2/1709/PNG/512/back_112351.png" alt=""> </a>
+<div class="pokemon-body d-flex justify-content-center ">
+    
+    <div class="pokemon-container">
+
+
+        <div class="header p-2 d-flex justify-content-center">
+            <h3>
+                {{capitalize this.model.name}}</h3>
+        </div>
+
+
+        <div class="detailed-header d-flex ">
+            <div class="image-title-container col-3 ">
+
+                <img class="each-image" src={{this.model.sprites.front_shiny}} alt="{{this.model.name}}">
+
+
+
+
+
+            </div>
+
+
+
+
+            <div class="title-container c0l-9 p-1">
+
+                <div class="type-id-container">
+                    {{#each this.model.types as |character-type|}}
+                    <span class="type-feature"> {{capitalize character-type.type.name}} </span>
+                    {{/each}}
+                    <div class="d-inline-block text-right"># {{this.model.id}} </div>
+                </div>
+
+
+
+
+
+                {{#each this.model.stats as |stats| }}
+                <div class="d-flex justify-content-center ">
+                    <div class="type-title">{{capitalize stats.stat.name}} </div>
+                    <div>
+                        :&nbsp;<progress value={{stats.base_stat}} max="200">{{stats.base_stat}}
+                        </progress>{{stats.base_stat}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="profile ">
+            <h3 class="sub-header">
+                <center> Profile</center>
+            </h3>
+            <ul>
+                <li>Height:{{this.model.height}}</li>
+                <li>Weight:{{this.model.weight}}</li>
+                <li>Abilities:
+                    {{#each this.model.abilities as |character-ability|}}
+                    <span> {{capitalize character-ability.ability.name}} </span>
+                    {{/each}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="moves ">
+            <h3 class="sub-header">
+                <center>Moves</center>
+            </h3>
+            <ul>
+                {{#each this.model.moves as |character-moves|}}
+                <li>
+                    {{capitalize character-moves.move.name }}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+</div>

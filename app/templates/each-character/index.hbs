@@ -1,0 +1,16 @@
+{{!-- <CharacterList></CharacterList> --}}
+<div class="container d-flex flex-col ov ">
+    <div class="row justify-content-evenly m-0">
+        {{#each this.model as |character|}}
+        <LinkTo class="text-dec d-flex-inline  col-2  character-container justify-content-center m-3 p-0"
+            @route='each-character.each' @model={{character.id}}>
+            <div class="img-container p-3 ">
+                <img src={{character.imgsrc}} alt="{{character.name}}">
+                <LinkTo class="text-dec" @route='each-character.each' @model={{character.id}}>{{capitalize
+                    character.name}}</LinkTo>
+            </div>
+        </LinkTo>
+        {{/each}}
+
+    </div>
+</div>

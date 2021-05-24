@@ -1,0 +1,26 @@
+{{!-- <button {{on 'click' this.nameAndImage}}>ENTER</button>
+
+<div class="container d-flex flex-col">
+    <div class="row">
+        {{#each this.dataa as |character|}}
+        <div class="d-flex  col-2  character-container justify-content-center" >
+            <div class="col-2 img-container ">
+                <img src={{character.imgsrc}} alt="{{character.name}}">
+                
+                <h6>{{character.name}}</h6>
+                <LinkTo @route='each-character.each' @model={{character}}>{{character.name}}</LinkTo>
+            </div>
+
+
+
+        </div>
+
+
+        {{/each}}
+
+    </div>
+</div> --}}
+
+
+
+{{yield}}
