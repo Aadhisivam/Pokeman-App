@@ -90,3 +90,6 @@ progress {
     width:10px;
     height:10px;
 }
+.text-dec:focus{
+    outline: red solid 5px;
+}

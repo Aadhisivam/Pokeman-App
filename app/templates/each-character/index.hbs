@@ -1,4 +1,6 @@
 {{!-- <CharacterList></CharacterList> --}}
+{{!-- <Input @type="text" @value={{this.searchItem}} @model={{this.searchItem}} placeholder="search"/> 
+<button type="submit" {{on 'click' this.model}}>click</button> --}}
 <div class="container d-flex flex-col ov ">
     <div class="row justify-content-evenly m-0">
         {{#each this.model as |character|}}
@@ -6,8 +8,8 @@
             @route='each-character.each' @model={{character.id}}>
             <div class="img-container p-3 ">
                 <img src={{character.imgsrc}} alt="{{character.name}}" >
-                <LinkTo class="text-dec" @route='each-character.each' @model={{character.id}}>{{capitalize
-                    character.name}}</LinkTo>
+                <h6>{{capitalize character.name}}</h6>
+                
             </div>
         </LinkTo>
         {{/each}}
