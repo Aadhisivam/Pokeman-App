@@ -5,7 +5,7 @@
         <LinkTo class="text-dec d-flex-inline  col-2  character-container justify-content-center m-3 p-0"
             @route='each-character.each' @model={{character.id}}>
             <div class="img-container p-3 ">
-                <img src={{character.imgsrc}} alt="{{character.name}}">
+                <img src={{character.imgsrc}} alt="{{character.name}}" >
                 <LinkTo class="text-dec" @route='each-character.each' @model={{character.id}}>{{capitalize
                     character.name}}</LinkTo>
             </div>
