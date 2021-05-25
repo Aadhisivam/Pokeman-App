@@ -1,7 +1,8 @@
 {{page-title (capitalize this.model.name)}}
-<a href="/each-character/"> <img class="back-icon" src="https://cdn.icon-icons.com/icons2/1709/PNG/512/back_112351.png" alt=""> </a>
+<a href="/each-character/"> <img class="back-icon" src="https://cdn.icon-icons.com/icons2/1709/PNG/512/back_112351.png"
+        alt=""> </a>
 <div class="pokemon-body d-flex justify-content-center ">
-    
+
     <div class="pokemon-container">
 
 
@@ -39,8 +40,12 @@
 
 
                 {{#each this.model.stats as |stats| }}
-                <div class="d-flex justify-content-center ">
+                <div class="d-flex  ">
                     <div class="type-title">{{capitalize stats.stat.name}} </div>
+                    {{!-- <div class="progress">
+                        <div class="progress-bar" role="progressbar" style={{width stats.base_stat}} aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="200">{{stats.base_stat}}</div>
+                    </div> --}}
                     <div>
                         :&nbsp;<progress value={{stats.base_stat}} max="200">{{stats.base_stat}}
                         </progress>{{stats.base_stat}}
