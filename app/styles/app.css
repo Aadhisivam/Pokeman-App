@@ -93,3 +93,16 @@ progress {
 .text-dec:focus{
     outline: red solid 5px;
 }
+.search-bar{
+    border:0;
+    border-bottom: 3px solid blue;
+    color:blue
+    
+}
+.search-bar:focus{
+    outline: none;
+    
+}
+.search-bar::placeholder{
+    color:blue;
+}

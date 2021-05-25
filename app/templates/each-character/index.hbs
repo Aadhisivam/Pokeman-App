@@ -1,8 +1,8 @@
 {{!-- <CharacterList></CharacterList> --}}
-<Input @type="text" @value={{this.searchItem}} placeholder="search"/> 
+<Input @type="text" @value={{this.searchItem}} placeholder="Search for Pokémon" class="container search-bar"/> 
 {{!-- <button type="submit" {{on 'click' this.model}}>click</button> --}}
 <div class="container d-flex flex-col ov ">
-    <div class="row justify-content-evenly m-0">
+    <div class="row container justify-content-evenly m-0">
 
         {{#each this.model as |character|}}
         {{#if (search this.searchItem character.name)}}
