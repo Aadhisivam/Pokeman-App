@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import { tracked } from '@glimmer/tracking';
 export default class EachCharacterRoute extends Route {
-    @tracked searchItem
+    // @tracked searchItem
     async model() {
         let dataa = []
         for (let i = 1; i <= 200; i++) {
