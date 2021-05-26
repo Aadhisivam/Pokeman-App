@@ -1,17 +1,18 @@
 {{!-- <CharacterList></CharacterList> --}}
-<Input @type="text" @value={{this.searchItem}} placeholder="Search for Pokémon" class="container search-bar"/> 
+
+<Input @type="text" @value={{this.searchItem}} placeholder="Search for Pokémon" class="container search-bar" />
 {{!-- <button type="submit" {{on 'click' this.model}}>click</button> --}}
-<div class="container d-flex flex-col ov ">
+<div class="container d-flex flex-col ov " >
     <div class="row container justify-content-evenly m-0">
 
         {{#each this.model as |character|}}
         {{#if (search this.searchItem character.name)}}
         <LinkTo class="text-dec d-flex-inline  col-2  character-container justify-content-center m-3 p-0"
-            @route='each-character.each' @model={{character.id}}>
+            @route='each-character.each' @model={{character.id}} style={{bg character.type 'grad' }}>
             <div class="img-container p-3 ">
-                <img src={{character.imgsrc}} alt="{{character.name}}" >
+                <img src={{character.imgsrc}} alt="{{character.name}}">
                 <h6>{{capitalize character.name}}</h6>
-                
+
             </div>
         </LinkTo>
         {{/if}}

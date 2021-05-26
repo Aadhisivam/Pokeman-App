@@ -75,7 +75,8 @@ progress {
 }
 
 .pokemon-container {
-    height: 89vh;
+    height: 86vh;
+    border: 2px solid ;
     overflow-y: scroll;
 }
 .pokemon-container::-webkit-scrollbar{

@@ -8,7 +8,7 @@ export default class EachCharacterRoute extends Route {
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + i)
             const data = await response.json()
             // console.log(response.body)
-            dataa.pushObject({ name: data.name, id: data.id, imgsrc: data.sprites.front_default })
+            dataa.pushObject({ name: data.name, id: data.id, imgsrc: data.sprites.front_default,type:data.types })
             
         }
         return dataa;
