@@ -15,8 +15,8 @@
             </div>
 
 
-            <div class="detailed-header d-flex ">
-                <div class="image-title-container col-3 ">
+            <div class="detailed-header d-md-flex ">
+                <div class="image-title-container d-flex justify-content-center ">
 
                     <img class="each-image" src={{this.model.sprites.front_default}} alt="{{this.model.name}}"
                         title={{capitalize this.model.name}}>
@@ -30,9 +30,9 @@
 
 
 
-                <div class="title-container p-1">
+                <div class="title-container p-1 ">
 
-                    <div class="type-id-container">
+                    <div class="type-id-container d-flex justify-content-center ">
                         {{#each this.model.types as |character-type|}}
                         <span class="type-feature p-1" style={{bg character-type.type.name 'background' }}> {{capitalize
                             character-type.type.name}} </span>
@@ -45,7 +45,7 @@
 
 
                     {{#each this.model.stats as |stats| }}
-                    <div class="d-flex  ">
+                    <div class="d-flex justify-content-center">
                         <div class="type-title">{{capitalize stats.stat.name}} </div>
                         {{!-- <div class="progress">
                             <div class="progress-bar" role="progressbar" style={{width stats.base_stat}}
