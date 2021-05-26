@@ -8,7 +8,7 @@ function search(args){
     if(searchName==undefined){
       return true;
     }
-    return modelName.startsWith(searchName)
+    return modelName.startsWith(searchName.toLowerCase())
 }
   
 
