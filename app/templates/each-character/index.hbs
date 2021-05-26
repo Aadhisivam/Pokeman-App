@@ -7,7 +7,7 @@
 
         {{#each this.model as |character|}}
         {{#if (search this.searchItem character.name)}}
-        <LinkTo class="text-dec d-flex-inline  col-2  character-container justify-content-center m-3 p-0"
+        <LinkTo class="text-dec d-flex-inline  col-sm-6 col-md-2  character-container justify-content-center m-3 p-0"
             @route='each-character.each' @model={{character.id}} style={{bg character.type 'grad' }}>
             <div class="img-container p-3 ">
                 <img src={{character.imgsrc}} alt="{{character.name}}">
@@ -20,3 +20,5 @@
 
     </div>
 </div>
+
+
